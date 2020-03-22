@@ -23,10 +23,6 @@ MAKEFLAGS += --silent
 ## install: Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
 install: go-get
 
-## watch: Run given command when code changes. e.g; make watch run="echo 'hey'"
-watch:
-	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) yolo -i . -e vendor -e bin -c "$(run)"
-
 ## compile: Compile the binary.
 compile:
 	@-touch $(STDERR)
@@ -43,7 +39,13 @@ clean:
 	@-rm $(GOBIN)/$(PROJECTNAME) 2> /dev/null
 	@-$(MAKE) go-clean
 
+run: go-compile go-run
+
 go-compile: go-get go-build
+
+go-run:
+	@echo $(GOBIN)/$(PROJECTNAME)
+	$(GOBIN)/$(PROJECTNAME)
 
 go-build:
 	@echo "  >  Building binary..."
