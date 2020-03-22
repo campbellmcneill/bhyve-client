@@ -4,6 +4,10 @@ Simple client for the B-Hyve Smart Sprinkler
 
 ## Simple Client for Controlling B-Hyve Smart Sprinkler
 
+## Status
+
+![CI](https://github.com/campbellmcneill/bhyve-client/workflows/CI/badge.svg)
+
 ## Manual
 
 Run `make help` to list available commands:
