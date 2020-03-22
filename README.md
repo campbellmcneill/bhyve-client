@@ -11,7 +11,7 @@ Run `make help` to list available commands:
 ``` make
   λ  make help
 
- Choose a command run in go-makefile-example:
+ Choose a command run in b-hyve client:
 
   install   Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
   watch     Run given command when code changes. e.g; make watch run="echo 'hey'"

@@ -3,7 +3,7 @@ BUILD := $(shell git rev-parse --short HEAD)
 PROJECTNAME := $(shell basename "$(PWD)")
 
 # Go related variables.
-GOBASE := $(shell pwd)
+GOBASE := $($GOPATH)
 GOPATH := $(GOBASE)/vendor:$(GOBASE)
 GOBIN := $(GOBASE)/bin
 GOFILES := $(wildcard *.go)
