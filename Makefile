@@ -3,7 +3,7 @@ BUILD := $(shell git rev-parse --short HEAD)
 PROJECTNAME := $(shell basename "$(PWD)")
 
 # Go related variables.
-GOBASE := $($GOPATH)
+GOBASE := $(PWD)
 GOPATH := $(GOBASE)/vendor:$(GOBASE)
 GOBIN := $(GOBASE)/bin
 GOFILES := $(wildcard *.go)
@@ -26,8 +26,6 @@ install: go-get
 ## watch: Run given command when code changes. e.g; make watch run="echo 'hey'"
 watch:
 	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) yolo -i . -e vendor -e bin -c "$(run)"
-
-restart-server: stop-server start-server
 
 ## compile: Compile the binary.
 compile:
