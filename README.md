@@ -18,8 +18,8 @@ Run `make help` to list available commands:
  Choose a command run in b-hyve client:
 
   install   Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
-  watch     Run given command when code changes. e.g; make watch run="echo 'hey'"
   compile   Compile the binary.
   exec      Run given command, wrapped with custom GOPATH. e.g; make exec run="go test ./..."
+  run       Run the binary created as part of this project. Compiles first.
   clean     Clean build files. Runs `go clean` internally.
 ```
