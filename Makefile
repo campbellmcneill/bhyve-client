@@ -41,7 +41,7 @@ clean:
 
 run: go-compile go-run
 
-go-compile: go-get go-build
+go-compile: go-build
 
 go-run:
 	@echo $(GOBIN)/$(PROJECTNAME)
